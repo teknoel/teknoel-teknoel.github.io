@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="/icon/favicon-120.png" sizes="120x120" />
+    <link rel="icon" href="/icon/favicon-180.png" sizes="180x180" />
+    <link rel="apple-touch-icon" href="/icon/favicon-120.png" sizes="120x120" />
+    <link rel="apple-touch-icon" href="/icon/favicon-180.png" sizes="180x180" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,  viewport-fit=cover, user-scalable = no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/rc.js"></script>
+    <link rel="stylesheet" href="/assets/rc.css">
+  </head>
+  <body class="solo">
+    <div id="static_bg"></div>
+    <div id="head">
+      <div class="safe"></div>
+      <div class="head_wrap center">
+        <div id="head_title" class="shy">
+          <div style="position: relative; top: -1.5px">
+            R<span
+              style="
+                padding-left: 2px;
+                font-size: 130%;
+                position: relative;
+                top: 1.5px;
+              "
+              >/</span
+            >Con
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <div id="info_display" class="shy"></div>
+      </div>
+      <div id="head_wrap" class="flexy super">
+        <div class="flexy justify">
+          <div id="badge_wrap">
+            <div id="badge"></div>
+            <div id="badge_dot"></div>
+          </div>
+        </div>
+        <div id="nav_icon_wrap" class="flexy justify right _admin">
+          <div id="cap_wrap">
+            <div id="cap" class="radial"></div>
+            <div id="unread"></div>
+          </div>
+          <div id="tool"></div>
+        </div>
+      </div>
+    </div>
+    <div id="menu" data-block>
+      <div class="menu_item" data-link="/?panel=about">About</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/">Clock</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/?panel=system">System</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/net/">Network</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/update/">Update</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/guide/">Guide</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/admin/">Admin</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/rc/" data-highlight>R/Con</div>
+    </div>
+
+    <div id="page" class="page solo" style="padding-top: 0">
+      <div id="toolbar">
+        <div id="toolbar_dmm" class="lcd inset">
+          <div id="toolbar_wrap">
+            <div id="copy" class="_dmm"></div>
+            <div id="refresh" class="_dmm"></div>
+
+            <div id="clear" class="_dmm"></div>
+          </div>
+          <hr class="dmmEdge" />
+        </div>
+      </div>
+      <div id="toolbar_edge"></div>
+      <div id="rc"></div>
+      <div id="insert_foot"></div>
+      <div id="foot" class="item slim flexy clear" style="margin-top: 6px">
+        <div id="diag_client" class="sub version" data-prefix="C"></div>
+        <div id="diag_firmware" class="sub version" data-prefix="F"></div>
+      </div>
+    </div>
+    
+  </body>
+</html>

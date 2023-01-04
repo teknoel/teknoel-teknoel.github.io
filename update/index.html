@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CubeCore - Update</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="/icon/favicon-120.png" sizes="120x120" />
+    <link rel="icon" href="/icon/favicon-180.png" sizes="180x180" />
+    <link rel="apple-touch-icon" href="/icon/favicon-120.png" sizes="120x120" />
+    <link rel="apple-touch-icon" href="/icon/favicon-180.png" sizes="180x180" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
+    />
+    <script type="module" crossorigin src="/assets/update.js"></script>
+    <link rel="stylesheet" href="/assets/update.css">
+  </head>
+  <body class="solo">
+    <div id="static_bg"></div>
+    <div id="head">
+      <div class="safe"></div>
+      <div class="head_wrap center">
+        <div id="head_title" class="btn shy">Update</div>
+      </div>
+      <div class="center">
+        <div id="info_display" class="shy"></div>
+      </div>
+      <div id="head_wrap" class="flexy super">
+        <div class="flexy justify">
+          <div id="badge_wrap">
+            <div id="badge"></div>
+            <div id="badge_dot"></div>
+          </div>
+        </div>
+        <div class="flexy pad justify right">
+          <div id="rc_ind"></div>
+          <div id="rssi_ind" data-hide data-static class="rssi"></div>
+        </div>
+      </div>
+    </div>
+    <div id="menu" data-block>
+      <div class="menu_item" data-link="/?panel=about">About</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/">Clock</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/?panel=system">System</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/net/">Network</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/update/" data-highlight>Update</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/guide/">Guide</div>
+    </div>
+    <div id="overlay">
+      <div id="overlay_title" class="flexy">
+        <div id="overlay_tread_L" class="overlay_tread"></div>
+        Waiting for CubeCore
+        <div id="overlay_tread_R" class="overlay_tread"></div>
+      </div>
+      <div id="overlay_prompt">
+        This page will automatically reload after CubeCore has rebooted and
+        joined <span class="no_wrap">Wi-Fi</span>, which typically takes less
+        than one minute. If this page does not refresh on its own, please
+        refresh it manually.
+      </div>
+    </div>
+    <div id="page" class="page solo">
+      <div id="version_item" class="flexy item">
+        <div>System Version</div>
+        <div id="diag_version" class="label" style="display: none">
+          <div id="diag_client" class="item_value"></div>
+          <div id="diag_firmware" class="item_value invert"></div>
+        </div>
+      </div>
+      <div id="update_insert">
+        <div class="lcd inset">
+          <div id="update_head"></div>
+          <div id="update_drop"></div>
+          <div class="item_wrap">
+            <div class="item flexy super">
+              <div
+                id="sys_ota"
+                data-safe-grad-start="100px"
+                data-safe-prompt="upload"
+                data-safe-prompt-start="0"
+                data-safe-prompt-end="50%"
+                data-safe-tread-persist
+                data-sticky
+              ></div>
+            </div>
+            <div class="item flexy super inert">
+              <div id="tron_output"></div>
+            </div>
+          </div>
+          <div id="update_foot"></div>
+        </div>
+        <hr class="dmmEdge" />
+      </div>
+      <div id="debug_insert" data-dynamic>
+        <div class="txt">
+          <div style="padding-top: 1em">
+            <svg class="warn_icon hot"><use href="#sym_warn_text" /></svg>
+            <span class="warn">DEVELOPER USE ONLY</span>
+          </div>
+        </div>
+        <div class="item flexy">
+          <div id="debug_load" data-label="Pass" class="wide"></div>
+        </div>
+        <div class="item flexy">
+          <div id="debug_fail" data-label="Fail" class="wide"></div>
+        </div>
+        <div class="item flexy">
+          <div id="debug_reset" data-label="Reset" class="wide"></div>
+        </div>
+      </div>
+      <div class="item flexy">
+        <div>
+          <svg class="clock_icon"><use href="#sym_clock" /></svg>Last
+        </div>
+        <div id="ota_time" class="item_value">n/a</div>
+      </div>
+      <div class="txt clear open _help">
+        <div id="update_warn" style="display: none">
+          <div style="padding-top: 1em">
+            <svg class="warn_icon hot"><use href="#sym_warn_text" /></svg>
+            <span class="warn" style="font-size: 18px">LOW WIFI SIGNAL</span>
+          </div>
+          <p class="p_top p_bot">
+            Move the device to a location with better
+            <span class="no_wrap">Wi-Fi</span> reception before using this
+            utility. You can check the current signal strength in the System
+            Info subpanel.
+          </p>
+        </div>
+        <p id="readme_p" class="p_top">
+          Use this utility to update CubeCore with Over-The-Air (OTA)
+          programming. If you are using a mobile device, you must transfer the
+          update file from iCloud or Google Drive to your local storage before
+          using this utility. A complete system update may require two separate
+          files, which should be uploaded one at a time in any order.
+        </p>
+        <p class="p_top">
+          The built-in display will flash
+          <span class="tna_RetroT">OTA,Y</span> upon success. When uploading a
+          System file, CubeCore must restart and will show
+          <span class="tna_RetroT">RST,3</span> <b>..</b>
+          <span class="tna_RetroT">2</span> <b>..</b>
+          <span class="tna_RetroT">1</span> <b>..</b>
+          <span class="tna_RetroT">LOAD</span>.
+        </p>
+        <p class="p_top">
+          Wait for communication to be restored before using the app afterwards.
+          The Main Menu
+          <svg class="tna_icon"><use href="#sym_tna_hex" /></svg>
+          will change
+          <span class="no_wrap"
+            >to <svg class="tna_icon"><use href="#sym_tna" /></svg>
+          </span>
+          when ready. If this app does not automatically reconnect, manually
+          refresh this window.
+        </p>
+      </div>
+    </div>
+    
+  </body>
+</html>

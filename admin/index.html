@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CubeCore - Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="/icon/favicon-120.png" sizes="120x120" />
+    <link rel="icon" href="/icon/favicon-180.png" sizes="180x180" />
+    <link rel="apple-touch-icon" href="/icon/favicon-120.png" sizes="120x120" />
+    <link rel="apple-touch-icon" href="/icon/favicon-180.png" sizes="180x180" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,  viewport-fit=cover, user-scalable = no"
+    />
+    <script type="module" crossorigin src="/assets/admin.js"></script>
+    <link rel="stylesheet" href="/assets/admin.css">
+  </head>
+  <body class="solo">
+    <div id="static_bg"></div>
+    <div id="head">
+      <div class="safe"></div>
+      <div class="head_wrap center">
+        <div id="head_title" class="shy">Admin</div>
+      </div>
+      <div class="center">
+        <div id="info_display" class="shy"></div>
+      </div>
+      <div id="head_wrap" class="flexy super">
+        <div class="flexy justify">
+          <div id="badge_wrap">
+            <div id="badge"></div>
+            <div id="badge_dot"></div>
+          </div>
+        </div>
+        <div id="nav_icon_wrap" class="flexy justify right">
+          <div id="rc_ind"></div>
+          <div id="lock"></div>
+        </div>
+      </div>
+    </div>
+    <div id="menu" data-block>
+      <div class="menu_item" data-link="/?panel=about">About</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/">Clock</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/?panel=system">System</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/net/">Network</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/update/">Update</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/guide/">Guide</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/admin/" data-highlight>Admin</div>
+      <div class="menu_static"></div>
+      <div class="menu_item" data-link="/rc/">R/Con</div>
+    </div>
+
+    <div id="page" class="page solo" style="padding-top: 0">
+      <div id="toolbar">
+        <div id="strip">
+          <div id="strip_fill"></div>
+        </div>
+        <div id="toolbar_dmm" class="lcd inset">
+          <div id="toolbar_wrap">
+            <div id="toolbar_head"></div>
+            <div
+              id="pass"
+              data-type="password"
+              data-label="Authentication"
+            ></div>
+            <div class="item clear flexy">
+              <div
+                id="reset_user"
+                data-safe-thumb-w="38%"
+                data-safe-grad-start="80px"
+                data-safe-tread
+                data-sticky
+              ></div>
+              <div id="force_wrap">
+                <div id="force_bg"></div>
+                <div id="force"></div>
+              </div>
+            </div>
+            <div id="toolbar_foot"></div>
+            <hr class="dmmEdge" />
+          </div>
+        </div>
+      </div>
+      <div id="tab_item" class="tab_item flexy shy">
+        <div id="tab" data-rule data-rule-limit class="tab_def">
+          <div>mfg</div>
+          <div>reg</div>
+          <div>net</div>
+          <div>def</div>
+          <div>tron</div>
+        </div>
+        <div class="tab_hr"></div>
+        <div class="tab_fade"></div>
+        <div class="tab_shadow"></div>
+      </div>
+      <div id="mfg_insert" class="insert">
+        <div class="insert_head"></div>
+        <div id="mfg_product" data-label="Product"></div>
+        <div id="mfg_version" data-label="Version"></div>
+        <div id="mfg_serial" data-label="Serial Number"></div>
+        <div id="mfg_date" data-label="Manufacture Date"></div>
+        <div id="mfg_logic" data-label="Logic Board"></div>
+        <div id="mfg_display" data-label="Display Board"></div>
+        <div id="mfg_color_insert" class="item flexy _display">
+          <div id="mfg_color"></div>
+        </div>
+        <div id="mfg_note" data-label="Production Note"></div>
+        <div class="insert_foot"></div>
+      </div>
+
+      <div id="reg_insert" class="insert">
+        <div class="insert_head"></div>
+        <div id="reg_date" data-label="Registration Date"></div>
+        <div id="reg_name_1" data-label="First Name"></div>
+        <div id="reg_name_2" data-label="Last Name"></div>
+        <div class="item flexy clear">
+          <div class="label">Administrator</div>
+          <div id="reg_user"></div>
+        </div>
+        <div class="hr_wrap show"><hr /></div>
+        <div class="item flexy clear">
+          <div class="label">License Consent</div>
+          <div id="user_consent"></div>
+        </div>
+        <div style="display: none">
+          <div class="hr_wrap show"><hr /></div>
+          <div id="reg_gp_1" data-label="Field 1"></div>
+          <div id="reg_gp_2" data-label="Field 2"></div>
+          <div class="item flexy clear">
+            <div class="label">Gift</div>
+            <div id="def_gift"></div>
+          </div>
+        </div>
+        <div class="insert_foot"></div>
+      </div>
+
+      <div id="net_insert" class="insert">
+        <div class="insert_head"></div>
+        <div id="def_device" data-label="Device Name"></div>
+        <div id="def_ssid" data-label="Wi-Fi Name"></div>
+        <div
+          id="def_pass"
+          data-type="password"
+          data-label="Wi-Fi Password"
+        ></div>
+        <div class="item flexy clear">
+          <div class="label">Alert</div>
+          <div id="def_alert"></div>
+        </div>
+        <div class="insert_foot"></div>
+      </div>
+
+      <div id="def_insert" class="insert">
+        <div id="def_insert_head" class="insert_head"></div>
+        <div id="def_bright_item" class="item flexy clear _display">
+          <div class="flexy super">
+            <div id="def_bright_label" class="label">Brightness</div>
+          </div>
+          <div class="flexy justify right">
+            <div id="def_bright_value" class="tna_Slide_value show"></div>
+            <div id="def_bright" data-slide-fill data-slide-on></div>
+          </div>
+        </div>
+        <div class="hr_wrap show _xpio"><hr /></div>
+        <div class="item flexy _xpio">
+          <div class="flexy super">
+            <div class="label">Volume</div>
+          </div>
+          <div class="flexy justify right">
+            <div id="def_sound"></div>
+          </div>
+        </div>
+        <div class="hr_wrap show _piezo"><hr /></div>
+        <div class="_piezo">
+          <div class="flexy item flush">
+            <div class="flexy justify super">
+              <div id="tap_button" class="sideButton small">
+                <div id="tap_twirl" data-label="Tap"></div>
+              </div>
+            </div>
+            <div class="flexy pad justify right">
+              <div id="def_tap_act"></div>
+            </div>
+          </div>
+          <div id="tap_insert" data-dynamic class="lcd inset">
+            <div id="def_tap_item" class="item flexy clear">
+              <div class="flexy super">
+                <div id="def_tap_label" class="label_lcd">Sensitivity</div>
+              </div>
+              <div class="flexy justify right">
+                <div id="def_tap_value" class="tna_Slide_value show"></div>
+                <div
+                  id="def_tap"
+                  data-slide-fill
+                  data-slide-off
+                  data-slide-on
+                ></div>
+              </div>
+            </div>
+            <div class="hr_wrap show _xpio"><hr /></div>
+            <div class="item flexy clear _xpio">
+              <div class="label_lcd">Tilt Install</div>
+              <div class="flexy justify right">
+                <div id="def_tilt"></div>
+              </div>
+            </div>
+            <hr class="dmmEdge" />
+          </div>
+        </div>
+        <div id="tap_foot" data-prime class="dmm_foot"></div>
+
+        <div id="ntp_title" class="section title">Clock</div>
+        <div id="ntp_item" class="flexy item flush">
+          <div id="ntp_button" class="sideButton small">
+            <div id="ntp_twirl" data-label="NTP"></div>
+          </div>
+          <div class="flexy pad justify right">
+            <span class="sub right skew">PPS</span>
+            <div id="def_pps"></div>
+          </div>
+        </div>
+        <div id="ntp_insert" class="lcd inset">
+          <div
+            id="def_ntp_url"
+            class="pad_section"
+            data-label="Source URL"
+          ></div>
+          <div class="item flexy clear">
+            <div class="flexy super">
+              <div id="def_ntp_int_label" class="label_lcd">Interval</div>
+            </div>
+            <div class="flexy justify right">
+              <div id="def_ntp_int_value" class="tna_Slide_value show"></div>
+              <div id="def_ntp_int"></div>
+            </div>
+          </div>
+          <hr class="dmmEdge" />
+        </div>
+        <div id="ntp_hr" class="hr_wrap show"><hr /></div>
+        <div id="gps_item" class="flexy item flush">
+          <div id="gps_button" class="sideButton small">
+            <div id="gps_twirl" data-label="GPS"></div>
+          </div>
+        </div>
+        <div id="gps_insert" class="lcd inset">
+          <div class="item flexy clear">
+            <div class="flexy super">
+              <div id="def_gps_log_i_label" class="label_lcd">Log</div>
+            </div>
+            <div class="flexy justify right">
+              <div id="def_gps_log_i_value" class="tna_Slide_value show"></div>
+              <div id="def_gps_log_i"></div>
+            </div>
+          </div>
+          <div class="hr_wrap show"><hr /></div>
+          <div class="item flexy clear">
+            <div class="flexy super">
+              <div id="def_gps_log_x_label" class="label_lcd">Blackout</div>
+            </div>
+            <div class="flexy justify right">
+              <div id="def_gps_log_x_value" class="tna_Slide_value show"></div>
+              <div id="def_gps_log_x"></div>
+            </div>
+          </div>
+          <div class="hr_wrap show"><hr /></div>
+          <div class="item flexy clear">
+            <div class="label_lcd">Sync Alert</div>
+            <div id="def_gps_alert"></div>
+          </div>
+          <hr class="dmmEdge" />
+        </div>
+        <div id="gps_hr" class="hr_wrap show"><hr /></div>
+        <div id="def_tz_item" class="item flexy clear">
+          <div class="flexy super">
+            <div id="def_tz_label" class="label"></div>
+          </div>
+          <div class="flexy justify right">
+            <div id="def_tz_value" class="tna_Slide_value show"></div>
+            <div id="def_tz" data-slide-fade data-slide-rule></div>
+          </div>
+        </div>
+        <div class="hr_wrap show"><hr /></div>
+        <div class="item flexy clear">
+          <div class="label">Daylight Stupid Time</div>
+          <div id="def_dst"></div>
+        </div>
+        <div class="hr_wrap show"><hr /></div>
+        <div class="item flexy clear">
+          <div class="label">24-hour Clock</div>
+          <div id="def_24h"></div>
+        </div>
+      </div>
+
+      <div id="tron_insert" class="insert">
+        <div class="insert_head"></div>
+        <div class="item flexy clear">
+          <div class="label">
+            R<span
+              style="
+                padding-left: 2px;
+                font-size: 130%;
+                position: relative;
+                top: 1.5px;
+              "
+              >/</span
+            >Con
+            <!-- <sup style="padding-left: 1px; font-size: 65%"><b>2</b></sup> -->
+          </div>
+          <div id="sys_console"></div>
+        </div>
+        <div class="hr_wrap show"><hr /></div>
+        <div class="item flexy clear">
+          <div class="label">Output</div>
+          <div id="sys_output"></div>
+        </div>
+        <div class="section title">Residual Self Image</div>
+        <div class="item flexy">
+          <div id="read_btn" class="wide"></div>
+        </div>
+        <div class="hr_wrap show"><hr /></div>
+        <div class="item flexy">
+          <div id="write_btn" class="wide"></div>
+        </div>
+        <div id="gps_copy_section" class="section title _tna_Accord _gps">
+          Macrodata Refinement
+        </div>
+        <div id="gps_copy_item" class="item flexy _tna_Accord _gps">
+          <div id="gps_copy" class="wide"></div>
+        </div>
+      </div>
+
+      <div class="item slim flexy clear" style="margin-top: 6px">
+        <div id="diag_client" class="sub version" data-prefix="C"></div>
+        <div id="diag_firmware" class="sub version" data-prefix="F"></div>
+      </div>
+    </div>
+    
+  </body>
+</html>
