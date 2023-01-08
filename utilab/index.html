@@ -67,7 +67,7 @@
             <div id="dial_twirl" data-prime data-label="Dial"></div>
           </div>
         </div>
-        <div class="flexy pad justify right">OK</div>
+        <div class="flexy pad justify right"></div>
       </div>
       <div id="dial_insert" class="lcd inset flexy">
         <div class="flexy justify">
@@ -96,6 +96,7 @@
             ></div>
           </div>
         </div>
+        <div class="_hr show"></div>
         <div class="item flexy">
           <div id="dial_button" class="wide"></div>
         </div>
@@ -119,31 +120,22 @@
         <div class="sub right dmm" style="width: 50%; text-align: right">
           <b>VOL</b>
         </div>
-        <div id="radio_dmm">
-          <div>0</div>
-          <div>1</div>
-          <div>2</div>
-        </div>
+        <div id="radio_dmm"></div>
       </div>
       <div id="radio_help" class="txt _help">
-        <div class="tip p_top">
-          <svg class="warn_icon">
-            <use href="#sym_warn_tna" />
-          </svg>
-          <p>
-            <span class="warn">Work in Progress</span> Need a toggle switch with
-            2 or more positions? Currently experimenting with inserting icons.
-          </p>
-        </div>
-        <div class="tip p_bot">
+        <p class="p_top p_bot">
+          <span class="warn">Work in Progress</span> Need a toggle switch with 2
+          or more positions? Currently experimenting with inserting icons.
+        </p>
+        <p class="p_bot">
           <svg class="info_icon">
             <use href="#sym_info" />
           </svg>
-          <p>
-            May investigate dynamic rendering of labels. If the control width is
-            too narrow, then switch labels to truncated labels.
-          </p>
-        </div>
+          <i
+            >May investigate dynamic rendering of labels. If the control width
+            is too narrow, then switch labels to truncated labels.</i
+          >
+        </p>
       </div>
       <div class="_hr show"></div>
 
@@ -194,20 +186,17 @@
         </div>
       </div>
       <div id="numbler_help" class="txt _help">
-        <p class="p_top">
+        <p class="p_top p_bot">
           Numbler controls streamlines numerical input by forgoing pop-up
           keyboards and static up/down buttons.
         </p>
-
-        <div class="tip p_bot">
-          <svg class="info_icon">
-            <use href="#sym_info" />
-          </svg>
-          <p>
+        <p class="p_bot">
+          <svg class="info_icon"><use href="#sym_info" /></svg>
+          <i>
             Press briefly on a digit to increment; the top half increases value
             and the bottom decreases value. Drag vertically to scroll value.
-          </p>
-        </div>
+          </i>
+        </p>
         <p class="p_bot">
           The Numbler Class consists of a three-tiered object hierarchy which
           simplifies creating multiple digit input. Numblers ganged together can
@@ -249,14 +238,14 @@
         </div>
       </div>
       <div id="safe_help" class="txt _help">
-        <p class="p_top">
+        <p class="p_top p_bot">
           SafeSlide is tailored for the execution of asynchronous processes. The
           linked process can provide detailed status of it's execution and
           update SafeSlides status text according to whether the process
           succeeded or failed. Three integrated text fields are available to
           provide feedback: Prompt, Status, and Value.
         </p>
-        <p>
+        <p class="p_bot">
           There are two modes of user engagement, both which relate to the
           behavior of the thumb component: <b>Sticky</b> and <b>Commit</b>.
           Sticky mode allows the thumb to self-lock in the engaged position.
@@ -311,9 +300,11 @@
         <div class="item flexy">
           <div id="meter_button_1" class="wide"></div>
         </div>
+        <div class="_hr show"></div>
         <div class="item flexy">
           <div id="meter_button_2" class="wide"></div>
         </div>
+        <div class="_hr show"></div>
         <div class="item flexy">
           <div id="meter_button_3" class="wide"></div>
         </div>
@@ -347,10 +338,12 @@
           <div id="slide_fill_button" class="wide"></div>
           <div class="sub prop"></div>
         </div>
+        <div class="_hr show"></div>
         <div class="item flexy">
           <div id="slide_fade_button" class="wide"></div>
           <div class="sub prop"></div>
         </div>
+        <div class="_hr show"></div>
         <div class="item flexy">
           <div id="slide_rule_button" class="wide"></div>
           <div class="sub prop"></div>
